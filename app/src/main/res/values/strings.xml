@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="password">password</string>
+    <string name="name">name</string>
+    <string name="contact">contact</string>
+    <string name="url_server">https://angeh.000webhostapp.com/</string>
+    <string name="url_user_create">api/user/create.php</string>
+    <string name="url_user_read">read.php</string>
+    <string name="add">Add</string>
+    <string name="error_value_required">Value is required</string>
+    <string name="error_record_not_saved">Record not saved</string>
+    <string name="record_saved">Record saved</string>
+    <string name="sync">Sync</string>
+    <string name="save">saved</string>
+</resources>
