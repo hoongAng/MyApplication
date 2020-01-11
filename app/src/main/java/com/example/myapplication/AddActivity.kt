@@ -45,11 +45,8 @@ class AddActivity : AppCompatActivity() {
         val name = editTextName.text.toString()
         val contact = editTextContact.text.toString()
         val password = editTextPassword.text.toString()
+        val conPassword = editTextConPassword.text.toString()
         val intent = Intent()
-        intent.putExtra(EXTRA_NAME, name)
-        intent.putExtra(EXTRA_CONTACT, contact)
-        intent.putExtra(EXTRA_PASSWORD, password)
-
 
         fun createUser(user: User) {
             val url =
@@ -102,17 +99,22 @@ class AddActivity : AppCompatActivity() {
             MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
 
         }
-        createUser(User(contact,name,password))
-    }
-    private fun isConnected(): Boolean{
-        val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
-        return activeNetwork?.isConnectedOrConnecting == true
-    }
-    companion object{
-        const val EXTRA_NAME = "com.example.myapplication.NAME"
-        const val EXTRA_CONTACT = "com.example.myapplication.CONTACT"
-        const val EXTRA_PASSWORD = "com.example.myapplication.PASSWORD"
+        if(contact!=null&&name!=null&&password!=null) {
+            if (password==conPassword) {
+                createUser(User(contact, name, password))
+            }
+            else
+            {
+                Intent(this, AddActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        else
+        {
+            Intent(this, AddActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }
