@@ -5,11 +5,18 @@
     <string name="contact">contact</string>
     <string name="url_server">https://angeh.000webhostapp.com/</string>
     <string name="url_user_create">api/user/create.php</string>
-    <string name="url_user_read">read.php</string>
+    <string name="url_user_read">api/post/readAll.php</string>
     <string name="add">Add</string>
     <string name="error_value_required">Value is required</string>
     <string name="error_record_not_saved">Record not saved</string>
     <string name="record_saved">Record saved</string>
     <string name="sync">Sync</string>
     <string name="save">saved</string>
+    <string name="url_validate_Name">api/user/validateUser.php</string>
+    <string name="error_value_repeated">Repeated username</string>
+    <string name="hide">Hide</string>
+    <string name="likeDesc">Like this post.</string>
+    <string name="favourite">Add To Favourtie</string>
+    <string name="unfavourite">Cancel Favourite.</string>
+    <string name="noLike">0</string>
 </resources>
